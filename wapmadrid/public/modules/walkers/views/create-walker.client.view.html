@@ -1,0 +1,64 @@
+<section data-ng-controller="WalkersController">
+    <div class="page-header">
+        <h1>New Walker</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="row">
+                    <div class="form-group">
+                        <div data-ng-show="error" class="text-center text-danger">
+                            <div class="alert alert-danger" role="alert">
+                                <strong data-ng-bind="error"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 text-center"><i class="glyphicon glyphicon-user walker-profile"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="firstName">Nombre</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="firstName" id="firstName" class="form-control" placeholder="Nombre" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="lastName">Apellidos</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="lastName" id="lastName" class="form-control" placeholder="Apellidos" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="sex">Sexo</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="sex" id="sex" class="form-control" placeholder="Sexo" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="datebirth">Fecha de nacimiento</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="datebirth" id="datebirth" class="form-control" placeholder="Fecha de nacimiento" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-6">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-success">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-ng-show="error" class="text-danger">
+                    <strong data-ng-bind="error"></strong>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>
